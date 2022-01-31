@@ -58,6 +58,7 @@
     <string name="system_category">System</string>
     <string name="status_bar_privacy_indicators_category">Privacy indicators</string>
     <string name="quick_settings_lock_screen_category">Lock screen</string>
+    <string name="advanced_backup_title">Backup</string>
 
     <!-- Volume panel on click -->
     <string name="volume_panel_expandable_title">Expandable Volume Rows</string>
@@ -311,4 +312,9 @@
     <string name="font_preview_text">The quick brown\nfox jumps over the\nlazy dog\n\nABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijkl\nmnopqrstuvwxyz\n1234567890</string>
     <string name="apply_button_text">Apply</string>
     <string name="font_picker_select_font">Select font</string>
+
+    <!-- Unlimited g00gle ph0t0s st0rage -->
+    <string name="unlimited_photos_storage_title">Unlimited Google Photos storage</string>
+    <string name="unlimited_photos_storage_summary">Unlimited storage for backup photos. Google Photos’ new features will not be available.</string>
+
 </resources>

@@ -13,6 +13,8 @@
             android:key="theme_category"
             android:title="@string/themes_title"
             android:fragment="com.android.tweaks.fragments.themes.Themes"
+            android:summary="@string/theme_summary"
+            settings:layout="@layout/everest_dashboard_preference_single"
             android:icon="@drawable/ic_settings_theme"/>
         
         <!-- Status Bar -->
@@ -20,6 +22,8 @@
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             android:fragment="com.android.tweaks.fragments.StatusBar" 
+            android:summary="@string/statusbar_summary"
+            settings:layout="@layout/everest_dashboard_preference_top"
             android:icon="@drawable/ic_settings_statusbar"/>
 
         <!-- Quick Settings panel -->
@@ -27,6 +31,8 @@
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
             android:fragment="com.android.tweaks.fragments.quicksettings.QuickSettings"
+            android:summary="@string/quicksettings_summary"
+            settings:layout="@layout/everest_dashboard_preference_bottom"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
         <!-- Lock Screen -->
@@ -34,6 +40,8 @@
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
             android:fragment="com.android.tweaks.fragments.lockscreen.LockScreen"
+            android:summary="@string/lockscreen_summary"
+            settings:layout="@layout/everest_dashboard_preference_top"
             android:icon="@drawable/ic_settings_lockscreens"/>
 
         <!-- Notifications -->
@@ -41,6 +49,8 @@
             android:key="notifications_category"
             android:title="@string/notifications_title"
             android:fragment="com.android.tweaks.fragments.notifications.Notifications"
+            android:summary="@string/notifications_summary"
+            settings:layout="@layout/everest_dashboard_preference_bottom"
             android:icon="@drawable/ic_settings_notifications"/>
 
         <!-- system -->
@@ -48,6 +58,8 @@
             android:key="system_category"
             android:title="@string/system_title" 
             android:fragment="com.android.tweaks.fragments.system.System"
+            android:summary="@string/system_summary"
+            settings:layout="@layout/everest_dashboard_preference_top"
             android:icon="@drawable/ic_settings_system"/>
         
         <!-- Misc -->
@@ -55,6 +67,8 @@
             android:key="misc_category"
             android:title="@string/misc_title" 
             android:fragment="com.android.tweaks.fragments.miscellaneous.Miscellaneous"
+            android:summary="@string/misc_summary"
+            settings:layout="@layout/everest_dashboard_preference_bottom"
             android:icon="@drawable/ic_settings_miscs"/>
 
 </PreferenceScreen>

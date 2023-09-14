@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024-2025 The EverestOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/everest_title" >
+
+        <!-- Theme Room -->
+        <Preference
+            android:key="theme_category"
+            android:title="@string/themes_title"
+            android:fragment="com.android.tweaks.fragments.themes.Themes"
+            android:icon="@drawable/ic_settings_theme"/>
+        
+        <!-- Status Bar -->
+        <Preference
+            android:key="statusbar_category"
+            android:title="@string/statusbar_title"
+            android:fragment="com.android.tweaks.fragments.StatusBar" 
+            android:icon="@drawable/ic_settings_statusbar"/>
+
+        <!-- Quick Settings panel -->
+        <Preference
+            android:key="quicksettings_category"
+            android:title="@string/quicksettings_title"
+            android:fragment="com.android.tweaks.fragments.quicksettings.QuickSettings"
+            android:icon="@drawable/ic_settings_quicksettings"/>
+
+        <!-- Lock Screen -->
+        <Preference
+            android:key="lockscreen_category"
+            android:title="@string/lockscreen_title" 
+            android:fragment="com.android.tweaks.fragments.lockscreen.LockScreen"
+            android:icon="@drawable/ic_settings_lockscreens"/>
+
+        <!-- Notifications -->
+        <Preference
+            android:key="notifications_category"
+            android:title="@string/notifications_title"
+            android:fragment="com.android.tweaks.fragments.notifications.Notifications"
+            android:icon="@drawable/ic_settings_notifications"/>
+
+        <!-- system -->
+        <Preference
+            android:key="system_category"
+            android:title="@string/system_title" 
+            android:fragment="com.android.tweaks.fragments.system.System"
+            android:icon="@drawable/ic_settings_system"/>
+        
+        <!-- Misc -->
+        <Preference
+            android:key="misc_category"
+            android:title="@string/misc_title" 
+            android:fragment="com.android.tweaks.fragments.miscellaneous.Miscellaneous"
+            android:icon="@drawable/ic_settings_miscs"/>
+
+</PreferenceScreen>

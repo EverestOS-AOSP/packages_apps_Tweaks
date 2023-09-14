@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024-2025 The EverestOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- App Title -->
+    <string name="everest_title">Tweaks</string>
+
+    <!-- Dashboard cards Titles -->
+    <string name="qs_panel_title">QS Panel</string>
+    <string name="clockfaces_title">Clock Faces</string>
+    <string name="fonts_title">Fonts</string>
+    <string name="lockscreen_title">LockScreen</string>
+    <string name="status_bar_title">StatusBar</string>
+    <string name="system_title">System</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="misc_title">Misc</string>
+    <string name="themes_title">Themes</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    
+    <!-- Sub category -->
+    <string name="general_category">General</string>
+
+</resources>

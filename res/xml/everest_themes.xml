@@ -61,6 +61,13 @@
             android:summary="@string/themes_wifi_icon_summary"
             android:fragment="com.android.tweaks.fragments.themes.WifiIcons"/>
 
+        <!-- Navigation bar icons -->
+        <Preference
+            android:key="android.theme.customization.navbar"
+            android:title="@string/themes_navigation_bar_icons_title"
+            android:summary="@string/themes_navigation_bar_icons_summary"
+            android:fragment="com.android.tweaks.fragments.themes.NavigationBarIcons"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

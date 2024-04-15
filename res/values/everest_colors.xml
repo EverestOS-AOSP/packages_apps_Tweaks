@@ -16,4 +16,7 @@
     <color name="everest_background3">@android:color/system_accent1_400</color>
 
     <color name="black">#FF000000</color>
+
+    <color name="option_border_default">#5f6368</color>
+
 </resources>

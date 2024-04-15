@@ -48,11 +48,13 @@ public class ThemeSettings extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_ICONS_CATEGORY = "themes_icons_category";
+    private static final String KEY_NAVBAR_ICON = "android.theme.customization.navbar";
     private static final String KEY_SIGNAL_ICON = "android.theme.customization.signal_icon";
     private PreferenceCategory mIconsCategory;
     private Preference mSignalIcon;
 
     @Override
+    private Preference mNavbarIcon;
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.everest_theme);
@@ -64,8 +66,12 @@ public class ThemeSettings extends SettingsPreferenceFragment
 
         mIconsCategory = (PreferenceCategory) findPreference(KEY_ICONS_CATEGORY);
         mSignalIcon = (Preference) findPreference(KEY_SIGNAL_ICON);
+        mNavbarIcon = (Preference) findPreference(KEY_NAVBAR_ICON);
         if (!DeviceUtils.deviceSupportsMobileData(context)) {
             mIconsCategory.removePreference(mSignalIcon);
+        }
+        if (DeviceUtils.isEdgeToEdgeEnabled(context)) {
+            mIconsCategory.removePreference(mNavbarIcon);
         }
     }
 

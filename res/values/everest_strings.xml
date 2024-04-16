@@ -72,4 +72,9 @@
     <string name="themes_navigation_bar_icons_title">Navigation bar icons</string>
     <string name="themes_navigation_bar_icons_summary">Set navigation bar icon style</string>
 
+    <!-- Status bar -->
+    <string name="status_bar_icons_category">Icons</string>
+    <string name="status_bar_tuner_title">Status bar tuner</string>
+    <string name="status_bar_tuner_summary">Choose which system icons can be shown</string>
+
 </resources>

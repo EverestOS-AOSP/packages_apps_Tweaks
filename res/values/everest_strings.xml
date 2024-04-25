@@ -283,4 +283,8 @@
     <string name="custom_battery_left">Margin Left</string>
     <string name="custom_battery_right">Margin Right</string>
 
+    <!-- Colored icons -->
+    <string name="status_bar_colored_icons_title">Colored icons</string>
+    <string name="status_bar_colored_icons_summary">Use launcher icons for app notifications</string>
+
 </resources>

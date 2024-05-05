@@ -49,6 +49,7 @@
     <!-- Sub category -->
     <string name="general_category">General</string>
     <string name="volume_category">Volume Panel</string>
+    <string name="status_bar_gestures_category">Gestures</string>
 
     <!-- Volume panel on click -->
     <string name="volume_panel_expandable_title">Expandable Volume Rows</string>
@@ -76,5 +77,13 @@
     <string name="status_bar_icons_category">Icons</string>
     <string name="status_bar_tuner_title">Status bar tuner</string>
     <string name="status_bar_tuner_summary">Choose which system icons can be shown</string>
+
+    <!-- Status bar - Quick pull down -->
+    <string name="status_bar_quick_pull_down_title">Quick pull down</string>
+    <string name="status_bar_quick_pull_down_summary">%1$s of the status bar pulls down quick settings</string>
+    <string name="status_bar_quick_pull_down_off">Off</string>
+    <string name="status_bar_quick_pull_down_right">Right side</string>
+    <string name="status_bar_quick_pull_down_left">Left side</string>
+    <string name="status_bar_quick_pull_down_both">Both sides</string>
 
 </resources>

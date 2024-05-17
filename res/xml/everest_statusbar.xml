@@ -68,6 +68,11 @@
             android:summary="@string/status_bar_battery_style_summary"
             android:fragment="com.android.tweaks.fragments.BatteryStyleSettings" />
 
+        <!-- Battery bar -->
+        <Preference
+            android:key="battery_bar"
+            android:title="@string/status_bar_battery_bar_title"
+            android:summary="@string/status_bar_battery_bar_summary"
+            android:fragment="com.android.tweaks.fragments.statusbar.BatteryBar" />
     </PreferenceCategory>
-
 </PreferenceScreen>

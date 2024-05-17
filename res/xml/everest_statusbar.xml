@@ -47,4 +47,16 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/status_bar_clock_and_date_title">
+
+        <!-- Clock & date -->
+        <Preference
+            android:key="clock"
+            android:title="@string/status_bar_clock_and_date_title"
+            android:summary="@string/status_bar_clock_and_date_summary"
+            android:fragment="com.android.tweaks.fragments.statusbar.Clock" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

@@ -6,29 +6,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- App Title -->
-    <string name="everest_title">Base Camp</string>
-
-    <!-- Categories -->
-    <string name="button_title">Buttons</string>
-    <string name="gestures_title">Gestures</string>
-    <string name="lockscreen_title">Lock screen</string>
-    <string name="misc_title">Miscellaneous</string>
-    <string name="quicksettings_title">Quick Settings</string>
-    <string name="statusbar_title">Status bar</string>
-    <string name="system_title">System</string>
-    <string name="theme_title">Theme Room</string>
-    <string name="notifications_title">Notifications</string>
-    
-    <!--Categories Summary-->
-    <string name="button_summary">Customize your buttons</string>
-    <string name="gestures_summary">Gestures Customizations</string>
-    <string name="lockscreen_summary">Customizations for lock screen</string>
-    <string name="misc_summary">Extra Settings</string>
-    <string name="quicksettings_summary">QS stuffs</string>
-    <string name="statusbar_summary">Status Bar Settings</string>
-    <string name="system_summary">System Customizations</string>
-    <string name="theme_summary">Themes Stuffs</string>
-    <string name="notifications_summary">Notifications customizations</string>
+    <string name="everest_title">Tweaks</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -38,5 +16,30 @@
     
     <!-- Sub category -->
     <string name="general_category">General</string>
+
+    <!-- Dashboard cards -->
+    <string name="qs_panel_title">QS Panel</string>
+    <string name="status_bar_title">Status Bar</string>
+    <string name="battery_title">Battery</string>
+    <string name="system_dashboard_title">System</string>
+    <string name="buttons_title">Buttons</string>
+    <string name="notification_title">Notifications</string>
+    <string name="gestures_dashboard_title">Gestures</string>
+    <string name="misc_dashboard_title">Misc</string>
+    <string name="theme_title">Themes</string>
+    <string name="lockscreen_title">Lockscreen</string>
+    <string name="fonts_title">Fonts</string>
+    <string name="clockfaces_title">Clock Faces</string>
+
+    <!--Categories Summary-->
+    <string name="buttons_summary">Customize your buttons</string>
+    <string name="gestures_summary">Gestures Customizations</string>
+    <string name="lockscreen_summary">Customizations for lock screen</string>
+    <string name="misc_summary">Extra Settings</string>
+    <string name="quicksettings_summary">QS stuffs</string>
+    <string name="statusbar_summary">Status Bar Settings</string>
+    <string name="system_summary">System Customizations</string>
+    <string name="theme_summary">Themes Stuffs</string>
+    <string name="notifications_summary">Notifications customizations</string>
 
 </resources>

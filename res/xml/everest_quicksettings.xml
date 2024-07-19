@@ -5,12 +5,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/quicksettings_title"
+    android:title="@string/qs_panel_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-    
-    <PreferenceCategory
-    android:title="@string/general_category">
-    
-    </PreferenceCategory>
 
 </PreferenceScreen>

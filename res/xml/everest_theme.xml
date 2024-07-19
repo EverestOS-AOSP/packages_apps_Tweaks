@@ -8,10 +8,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/theme_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
-    
-    <PreferenceCategory
-    android:title="@string/general_category">
-    
-    </PreferenceCategory>
 
 </PreferenceScreen>

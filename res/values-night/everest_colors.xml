@@ -6,10 +6,10 @@
 <resources
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
 
-     <!-- Dashboard/homepage icon background colors -->
-     <color name="homepage_subicon_bg">@*android:color/system_neutral1_900</color>
-     <color name="everest_pref_color">@android:color/system_neutral1_800</color>
-     <color name="everest_background1">@android:color/system_neutral1_900</color>
-     <color name="everest_background2">@android:color/system_neutral1_800</color>
-     <color name="everest_background3">@android:color/system_accent1_200</color>
+    <!-- Dashboard/homepage icon background colors -->
+    <color name="homepage_subicon_bg">@*android:color/system_neutral1_900</color>
+    <color name="everest_pref_color">@android:color/system_neutral1_800</color>
+    <color name="everest_background1">@android:color/system_neutral1_900</color>
+    <color name="everest_background2">@android:color/system_neutral1_800</color>
+    <color name="everest_background3">@android:color/system_accent1_200</color>
 </resources>

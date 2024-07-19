@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top section with wallpaper and cards -->
+    <LinearLayout
+        android:id="@+id/quick_access_widgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal">
+
+        <!-- Main Card with wallpaper -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/themes_card"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/settingslib_materialColorSurfaceBright"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Wallpaper Preview Container -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/wallpaper_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <com.android.tweaks.utils.BlurWallpaperView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Circle Buttons Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/fonts_card"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="32.5dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_themes" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/theme_card"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="12dp"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="32.5dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_fonts" />
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Right column cards -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Top card -->
+            <RelativeLayout
+                android:id="@+id/profile_section"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/everest_background_single">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/profile_card"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="32.5dp"
+                        app:cardElevation="0dp">
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/about_card"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="32.5dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_about" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Bottom card -->
+            <RelativeLayout
+                android:id="@+id/clock_section"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/everest_background_single">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/lockscreen_card"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="32.5dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_lock" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/clockface_card"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="32.5dp"
+                        app:cardElevation="0dp">
+
+                        <TextClock
+                            android:id="@+id/card_clock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:format12Hour="h:mm"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Quick Settings and Status Bar Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/qs_section"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_weight="2"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- QS Panel -->
+                <LinearLayout
+                    android:id="@+id/qs_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_bg"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_qs" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        style="@style/everestTextSecondaryMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/qs_panel_title"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Status Bar -->
+                <LinearLayout
+                    android:id="@+id/statusbar_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_bg"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_statusbar" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        style="@style/everestTextSecondaryMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/status_bar_title"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/battery_card"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_bg"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:tint="?android:attr/textColorPrimary"
+                        android:src="@drawable/ic_tweaks_battery" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/everestTextSecondaryMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/battery_title"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- System and Volume/Power Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/system_section"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_weight="1"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:id="@+id/system_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_bg"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:tint="?android:attr/textColorPrimary"
+                        android:src="@drawable/ic_tweaks_system" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/everestTextSecondaryMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/system_dashboard_title"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/volume_power_section"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="2"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Volume -->
+                <LinearLayout
+                    android:id="@+id/volume_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_bg"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_volume" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        style="@style/everestTextSecondaryMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/volume_title"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Power -->
+                <LinearLayout
+                    android:id="@+id/power_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_bg"
+                        app:cardBackgroundColor="?android:attr/colorBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+
+                        <com.android.internal.widget.PreferenceImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:tint="?android:attr/textColorPrimary"
+                            android:src="@drawable/ic_tweaks_power" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        style="@style/everestTextSecondaryMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/power_title"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/notifications_card"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_weight="1"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_bg"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:tint="?android:attr/textColorPrimary"
+                        android:src="@drawable/ic_tweaks_notification" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/everestTextSecondaryMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/notification_title"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gestures_card"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_bg"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:tint="?android:attr/textColorPrimary"
+                        android:src="@drawable/ic_tweaks_gestures" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/everestTextSecondaryMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/gestures_dashboard_title"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/misc_card"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/everest_background_single">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_bg"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:tint="?android:attr/textColorPrimary"
+                        android:src="@drawable/ic_tweaks_misc" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/everestTextSecondaryMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/misc_dashboard_title"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

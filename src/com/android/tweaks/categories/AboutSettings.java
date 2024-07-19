@@ -39,13 +39,13 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class QuickSettings extends SettingsPreferenceFragment 
-            implements Preference.OnPreferenceChangeListener {
+public class AboutSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.everest_quicksettings);
+        addPreferencesFromResource(R.xml.everest_about);
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
@@ -54,7 +54,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
-    }  
+    }
 
     @Override
     public int getMetricsCategory() {
@@ -66,7 +66,7 @@ public class QuickSettings extends SettingsPreferenceFragment
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.everest_quicksettings;
+                    sir.xmlResId = R.xml.everest_about;
                     return Arrays.asList(sir);
                 }
 

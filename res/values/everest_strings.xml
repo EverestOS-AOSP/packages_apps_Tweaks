@@ -203,4 +203,8 @@
     <string name="navigation_bar_category">Navigation Bar</string>
     <string name="system_navigation_summary">Configure navigation menus</string>
 
+    <!-- System Buttons -->
+    <string name="system_buttons_title">Buttons Settings</string>
+    <string name="system_buttons_summary">Buttons settings present in system</string>
+
 </resources>

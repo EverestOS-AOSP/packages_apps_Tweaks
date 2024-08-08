@@ -8,4 +8,12 @@
     android:title="@string/buttons_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
+    <PreferenceCategory
+        android:title="@string/system_category">
+        <lineageos.preference.LineagePartsPreference
+            android:key="button_settings"
+            android:title="@string/system_buttons_title"
+            android:summary="@string/system_buttons_summary" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

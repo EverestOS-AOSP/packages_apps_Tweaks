@@ -59,6 +59,7 @@
     <string name="status_bar_privacy_indicators_category">Privacy indicators</string>
     <string name="quick_settings_lock_screen_category">Lock screen</string>
     <string name="advanced_backup_title">Backup</string>
+    <string name="advanced_launcher_title">Pixel Launcher</string>
 
     <!-- Volume panel on click -->
     <string name="volume_panel_expandable_title">Expandable Volume Rows</string>
@@ -316,5 +317,13 @@
     <!-- Unlimited g00gle ph0t0s st0rage -->
     <string name="unlimited_photos_storage_title">Unlimited Google Photos storage</string>
     <string name="unlimited_photos_storage_summary">Unlimited storage for backup photos. Google Photos’ new features will not be available.</string>
+
+    <!-- Launcher background blur -->
+    <string name="launcher_background_blur_title">Background blur</string>
+    <string name="launcher_background_blur_summary">Enable blur effect for recent items page background.</string>
+
+    <!-- Themed icon -->
+    <string name="more_themed_icons_title">More themed icons</string>
+    <string name="more_themed_icons_summary">Extends support for dynamic color themed icons for installed apps.</string>
 
 </resources>

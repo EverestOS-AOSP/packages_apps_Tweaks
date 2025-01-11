@@ -125,6 +125,12 @@
                         app:cardCornerRadius="32.5dp"
                         app:cardElevation="0dp">
 
+                    <ImageView
+                        android:id="@+id/profile_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
@@ -324,17 +330,16 @@
                     android:layout_width="85dp"
                     android:layout_height="85dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/icon_bg"
                     app:cardBackgroundColor="?android:attr/colorBackground"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="0dp">
 
-                    <com.android.internal.widget.PreferenceImageView
+                    <com.android.tweaks.utils.BatteryIconView
+                        android:id="@+id/battery_icon"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
-                        android:tint="?android:attr/textColorPrimary"
-                        android:src="@drawable/ic_tweaks_battery" />
+                        android:tint="?android:attr/textColorPrimary"/>
 
                 </com.google.android.material.card.MaterialCardView>
 

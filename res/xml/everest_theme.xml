@@ -9,4 +9,11 @@
     android:title="@string/theme_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
 
+        <!-- Settings UI -->
+	<Preference
+            android:key="settings_ui"
+            android:title="@string/settings_ui_title"
+            android:summary="@string/settings_ui_summary"
+            android:fragment="com.android.tweaks.categories.ui.Settings"/>
+
 </PreferenceScreen>

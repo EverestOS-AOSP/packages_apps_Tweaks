@@ -5,6 +5,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <string name="default_value">Default</string>
+
+    <!-- Settings Styles -->
+    <string name="settings_ui_title">Settings UI</string>
+    <string name="settings_ui_summary">Configure settings app user interface</string>
+    <string name="search_bar_style_title">Search Bar Style</string>
+    <string name="settings_sb_style_1">Android 15 (Revamped)</string>
+    <string name="dashboard_greetings_title">Dashboard Greetings</string>
+    <string name="dashboard_greetings_summary">Enable/disable dashboard greetings</string>
+
     <!-- App Title -->
     <string name="everest_title">Tweaks</string>
 

@@ -8,4 +8,10 @@
     android:title="@string/system_dashboard_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="volume_panel_click_enabled"
+        android:title="@string/volume_panel_click_title"
+        android:summary="@string/volume_panel_click_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

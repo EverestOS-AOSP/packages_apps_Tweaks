@@ -48,5 +48,10 @@
     
     <!-- Sub category -->
     <string name="general_category">General</string>
+    <string name="volume_category">Volume Panel</string>
+
+    <!-- Volume panel on click -->
+    <string name="volume_panel_expandable_title">Expandable Volume Rows</string>
+    <string name="volume_panel_expandable_summary">Expand the volume rows instead of displaying the A15 volume panel</string>
 
 </resources>

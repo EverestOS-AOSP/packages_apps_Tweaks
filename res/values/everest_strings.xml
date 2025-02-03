@@ -49,4 +49,8 @@
     <!-- Sub category -->
     <string name="general_category">General</string>
 
+    <!-- Volume panel on click -->
+    <string name="volume_panel_click_title">A15 Volume panel</string>
+    <string name="volume_panel_click_summary">Open volume panel on click instead of expanding volume rows</string>
+
 </resources>

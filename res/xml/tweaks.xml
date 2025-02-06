@@ -6,69 +6,61 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/everest_title" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/tweaks_title" >
 
-        <!-- Theme Room -->
-        <Preference
-            android:key="theme_category"
-            android:title="@string/themes_title"
-            android:fragment="com.android.tweaks.fragments.themes.Themes"
-            android:summary="@string/theme_summary"
-            settings:layout="@layout/everest_dashboard_preference_single"
-            android:icon="@drawable/ic_settings_theme"/>
-        
-        <!-- Status Bar -->
-        <Preference
-            android:key="statusbar_category"
-            android:title="@string/statusbar_title"
-            android:fragment="com.android.tweaks.fragments.StatusBar" 
-            android:summary="@string/statusbar_summary"
-            settings:layout="@layout/everest_dashboard_preference_top"
-            android:icon="@drawable/ic_settings_statusbar"/>
+        <!-- Quick Access (Lockscreen, fonts and clock faces)-->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="tweaks_dashboard_quick_access"
+            android:layout="@layout/tweaks"
+            android:selectable="false"/>
 
-        <!-- Quick Settings panel -->
-        <Preference
-            android:key="quicksettings_category"
-            android:title="@string/quicksettings_title"
-            android:fragment="com.android.tweaks.fragments.quicksettings.QuickSettings"
-            android:summary="@string/quicksettings_summary"
-            settings:layout="@layout/everest_dashboard_preference_bottom"
-            android:icon="@drawable/ic_settings_quicksettings"/>
+        <PreferenceCategory
+            android:key="others_category"
+            android:title="Other Features">
 
-        <!-- Lock Screen -->
-        <Preference
-            android:key="lockscreen_category"
-            android:title="@string/lockscreen_title" 
-            android:fragment="com.android.tweaks.fragments.lockscreen.LockScreen"
-            android:summary="@string/lockscreen_summary"
-            settings:layout="@layout/everest_dashboard_preference_top"
-            android:icon="@drawable/ic_settings_lockscreens"/>
+                <Preference
+                    android:fragment="com.android.tweaks.fragments.statusbar.StatusBar"
+                    android:icon="@drawable/ic_tweaks_statusbar"
+                    android:summary="@string/statusbar_summary"
+                    android:title="@string/status_bar_title"
+                    settings:layout="@layout/everest_cardview_single_left" />
 
-        <!-- Notifications -->
-        <Preference
-            android:key="notifications_category"
-            android:title="@string/notifications_title"
-            android:fragment="com.android.tweaks.fragments.notifications.Notifications"
-            android:summary="@string/notifications_summary"
-            settings:layout="@layout/everest_dashboard_preference_bottom"
-            android:icon="@drawable/ic_settings_notifications"/>
+                <Preference
+                    android:fragment="com.android.tweaks.fragments.quicksettings.QuickSettings"
+                    android:icon="@drawable/ic_tweaks_qs"
+                    android:summary="@string/quicksettings_summary"
+                    android:title="@string/qs_panel_title"
+                    settings:layout="@layout/everest_cardview_single_right" />
 
-        <!-- system -->
-        <Preference
-            android:key="system_category"
-            android:title="@string/system_title" 
-            android:fragment="com.android.tweaks.fragments.system.System"
-            android:summary="@string/system_summary"
-            settings:layout="@layout/everest_dashboard_preference_top"
-            android:icon="@drawable/ic_settings_system"/>
-        
-        <!-- Misc -->
-        <Preference
-            android:key="misc_category"
-            android:title="@string/misc_title" 
-            android:fragment="com.android.tweaks.fragments.miscellaneous.Miscellaneous"
-            android:summary="@string/misc_summary"
-            settings:layout="@layout/everest_dashboard_preference_bottom"
-            android:icon="@drawable/ic_settings_miscs"/>
+                <Preference
+                    android:fragment="com.android.tweaks.fragments.lockscreen.LockScreen"
+                    android:icon="@drawable/ic_tweaks_lock"
+                    android:summary="@string/lockscreen_summary"
+                    android:title="@string/lockscreen_title"
+                    settings:layout="@layout/everest_cardview_single_left" />
+
+                <Preference
+                    android:fragment="com.android.tweaks.fragments.notifications.Notifications"
+                    android:icon="@drawable/ic_tweaks_notification"
+                    android:summary="@string/notifications_summary"
+                    android:title="@string/notifications_title"
+                    settings:layout="@layout/everest_cardview_single_right" />
+
+                <Preference
+                    android:fragment="com.android.tweaks.fragments.system.System"
+                    android:icon="@drawable/ic_tweaks_system"
+                    android:summary="@string/system_summary"
+                    android:title="@string/system_title"
+                    settings:layout="@layout/everest_cardview_single_left" />
+
+                <Preference
+                    android:fragment="com.android.tweaks.fragments.miscellaneous.Miscellaneous"
+                    android:icon="@drawable/ic_tweaks_misc"
+                    android:summary="@string/misc_summary"
+                    android:title="@string/misc_title"
+                    settings:layout="@layout/everest_cardview_single_right" />
+
+        </PreferenceCategory>
 
 </PreferenceScreen>

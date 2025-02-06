@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/quick_access_widgets"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <!-- Left Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Wallpaper Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/wallpaper_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/settingslib_materialColorSurfaceBright"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:rippleColor="?android:colorControlHighlight">
+
+                <com.android.tweaks.utils.WallpaperCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Right Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Clock Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/clockface_card"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/settingslib_materialColorSurfaceBright"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:rippleColor="?android:colorControlHighlight">
+
+                <TextClock
+                    android:id="@+id/card_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:format12Hour="HH:mm"
+                    android:textColor="?android:colorAccent"
+                    android:textSize="30sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Icons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- Themes Icon -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/themes_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/settingslib_materialColorSurfaceBright"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:rippleColor="?android:colorControlHighlight">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tweaks_themes"
+                        android:tint="?android:colorAccent" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Fonts Icon -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fonts_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/settingslib_materialColorSurfaceBright"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:rippleColor="?android:colorControlHighlight">
+
+                    <com.android.internal.widget.PreferenceImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tweaks_fonts"
+                        android:tint="?android:colorAccent" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
